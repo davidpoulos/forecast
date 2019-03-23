@@ -1,0 +1,14 @@
+{
+  "name": "forecast",
+  "version": "1.0.0",
+  "description": "API for storing weather data and creating forecasts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Poulos",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
