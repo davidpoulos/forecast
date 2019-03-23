@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  mongodb:
+    container_name: mongodb
+    image: mongo:4.1.9-xenial
+    networks:
+      - forecast-net
+    ports:
+      - "27017-27019:27017-27019"
+  node: 
+    container_name: forecast-app
+    image: node:10.15.3-stretch
+    command: sleep infinity
+    volumes:
+      - .:/code
+    networks:
+      - forecast-net
+    ports: 
+      - "3000:3000"
+    
+networks:
+  forecast-net:
