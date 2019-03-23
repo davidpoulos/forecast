@@ -8,7 +8,7 @@ const app = express();
 const userRoute = require('../routes/user');
 
 
-app.use('/', userRoute);
+app.use('/user', userRoute);
 
 
 module.exports = app;

@@ -9,7 +9,7 @@ const numCPUs = os.cpus().length;
 
 (() => {
 	if(cluster.isMaster) {
-		for(let i = 0; i < numCPUs; i++ ) {
+		for(let i = 0; i < numCPUs; i++) {
 			cluster.fork();
 		}
 	} else {
