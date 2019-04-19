@@ -9,11 +9,9 @@ const { encryptPassword } = require('../../../src/utils/encryption');
 
 describe('Password Encryption Tests', () => {
     
-	it('Password as string is successfully encrypted', async () => {
+	it('Password as string is successfully encrypted', () => {
 		const VALID_PASS = 'nacho';
-		const encryptedPass = await encryptPassword(VALID_PASS);
-		expect(encryptedPass).to.not.equal(VALID_PASS);
-	
+		expect(encryptPassword(VALID_PASS)).to.eventually.not.equal(VALID_PASS);
 	});
     
 	it('Throw Promise.reject if Int/undefined password entered', () => {
