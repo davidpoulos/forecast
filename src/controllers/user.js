@@ -1,7 +1,7 @@
 
 
 
-const UserService = require('../../services/user');
+const userService = require('../../services/user');
 
 /**
  * 
@@ -11,7 +11,7 @@ const UserService = require('../../services/user');
 async function createUser(req, res) {
 
 	try {
-		await UserService.createUser(req.body());  
+		await userService.createUser(req.body());  
 		return res.status(200).json({success: 'User was successfully created'}); 
 	} catch(error) {
 		return res.status(400).json({ error: 'Un-able to create User'});
