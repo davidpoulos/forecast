@@ -18,6 +18,19 @@ async function createUser(req, res) {
 	}
 }
 
+/**
+ * 
+ * @param {request} req 
+ * @param {response} res 
+ */
+async function deleteUser(req, res) {
+	try {
+		await userService.deleteUser
+	} catch(error) {
+
+	}
+}
+
 module.exports = {
 	createUser
 };
