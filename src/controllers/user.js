@@ -1,7 +1,7 @@
 
 
 
-const userService = require('../../services/user');
+const SserService = require('../services/user');
 
 /**
  * 
@@ -24,13 +24,29 @@ async function createUser(req, res) {
  * @param {response} res 
  */
 async function deleteUser(req, res) {
-	try {
-		await userService.deleteUser
-	} catch(error) {
+	// try {
+	// 	await userService.deleteUser
+	// } catch(error) {
 
-	}
+	// }
+}
+
+/**
+ * 
+ * @param {request} req 
+ * @param {response} res 
+ */
+async function getUser(req, res) {
+
+}
+
+async function getAllUsers(req, res) {
+
 }
 
 module.exports = {
-	createUser
+	createUser,
+	deleteUser,
+	getUser,
+	getAllUsers
 };

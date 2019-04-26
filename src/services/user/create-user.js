@@ -1,5 +1,6 @@
-
 const User = require('../../model/user');
+const mongoose = require('mongoose');
+mongoose.set('bufferCommands', false);
 
 /**
  * 
@@ -7,7 +8,9 @@ const User = require('../../model/user');
  */
 async function createUser(newUser) {
 	const user = new User(newUser);
-	await user.save();
+	//check if exists
+	//else create 
+	const result = await user.save();
 }
 
 module.exports = {

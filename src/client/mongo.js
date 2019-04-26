@@ -1,6 +1,9 @@
 const logger = require('../logger');
 const mongoose = require('mongoose');
 
+//DISABLE BUFFERING
+mongoose.set('bufferCommands', false);
+
 /**
  * Connects Mongoose to MongoDB. Once done, all instances of Mongoose automically use this connection
  */
